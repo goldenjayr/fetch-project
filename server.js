@@ -5,6 +5,7 @@ const app = express()
 const database = new Datastore('database.db')
 database.loadDatabase()
 
+// these act like middleware.... the requests pass through these methods
 app.use(express.static('public'))
 app.use(express.json())
 
